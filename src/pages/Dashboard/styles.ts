@@ -13,7 +13,9 @@ export const ProductContainer = styled.View`
   flex-direction: row;
 `;
 
-export const ProductList = styled(FlatList).attrs({
+export const ProductList = styled(
+  FlatList as new () => FlatList<Interface>,
+).attrs({
   numColumns: 2,
 })`
   flex: 1;
